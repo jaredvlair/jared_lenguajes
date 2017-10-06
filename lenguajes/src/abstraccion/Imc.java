@@ -10,10 +10,10 @@ package abstraccion;
  * @author jared
  */
 public class Imc {
-    usuario u;
+    Usuario u;
     String resultado;
     public String  calcular (){
-        float mivalor =u.getpeso/(u.getaltura*u.getaltura);
+        float mivalor =u.getPeso()/(u.getaltura()*u.getaltura();
         resultado="Tu imc es "+mivalor;
         return resultado;
                 
