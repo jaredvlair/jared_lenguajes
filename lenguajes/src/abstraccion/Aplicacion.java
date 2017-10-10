@@ -98,8 +98,11 @@ public class Aplicacion extends javax.swing.JFrame {
         Usuario jared=new Usuario();
         //jared.peso=70;
         //jared.altura=1.68f;
-        jared.setPeso(-70);
-        jared.setAltura();       
+        //PRIMERO PEDIMOIS EL VALOR TEXTO AL PRIMER COMENTARIO
+        float peso=Float.parseFloat(textopeso.getText());
+        jared.setPeso(peso);
+        float altura=Float.parseFloat(textoaltura.getText());
+        jared.setAltura(altura);       
         Imc modelo=new Imc();
         modelo.u=jared;
               

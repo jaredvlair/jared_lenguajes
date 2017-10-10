@@ -28,15 +28,16 @@ public class Prueba1 {
        //los errorrees de datos se pueden quitar 
           //cuando se ve un  solo signo de igual en programacion , significa que se le asigna  de derecha a izquierda
     //algo chistoso con los flotantes
-    float f=2.0f;
-    double d=2.0;//el valor double es por defecto asi que si se pone en float se debe hacer casting forzado
+    float f =2.0f;
+    double d=2.0;
+//el valor double es por defecto asi que si se pone en float se debe hacer casting forzado
     
     boolean b1=true;
     boolean b2=false;
     
     //tipo caracter 
     char algo='h';
-    char otro='';
+    char otro=' ';
     
     }
           
