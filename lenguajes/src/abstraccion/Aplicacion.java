@@ -45,6 +45,12 @@ public class Aplicacion extends javax.swing.JFrame {
 
         etiqueta.setText("resultado");
 
+        textopeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textopesoActionPerformed(evt);
+            }
+        });
+
         jLabel1.setText("peso");
 
         jLabel2.setText("altura");
@@ -109,6 +115,10 @@ public class Aplicacion extends javax.swing.JFrame {
                
                etiqueta.setText( modelo.calcular());
     }//GEN-LAST:event_botoncitoActionPerformed
+
+    private void textopesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textopesoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textopesoActionPerformed
 
     /**
      * @param args the command line arguments
