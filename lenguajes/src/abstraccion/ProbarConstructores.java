@@ -23,18 +23,17 @@ public class ProbarConstructores {
         System.out.println(persona.getPeso());
         //la de arriba es para imprimir alores de retorno
          System.out.println(persona.getAltura());
-         
-           Usuario persona1=new Usuario();
-                   float Peso= 93;
-                   float Altura=1.70f;
-      System.out.println(Peso);
-      System.out.println(Altura);
-        
-    }
+          
+    
 
        
-         
+           Usuario persona1=new Usuario();
+                  
+      System.out.println(persona1.getPeso1());
+      System.out.println(persona1.getAltura1());
     }
+} 
+    
             
     
 
