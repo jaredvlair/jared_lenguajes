@@ -111,6 +111,8 @@ public class Aplicacion extends javax.swing.JFrame {
         jared.setAltura(altura);       
         Imc modelo=new Imc();
         modelo.u=jared;
+        
+      
               
                
                etiqueta.setText( modelo.calcular());
