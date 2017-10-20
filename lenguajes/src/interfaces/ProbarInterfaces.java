@@ -9,9 +9,9 @@ package interfaces;
  *
  * @author jared
  */
-public interface Direccion {
-    public int x=2;
-    // un metodo
-    public void generarDireccion();
-    //pongamos un construcotor
+public class ProbarInterfaces {
+    public static void main(String[]arg){
+        //Direccion d=new Direccion();
+        Direccion d;
+    }
 }

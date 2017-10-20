@@ -9,9 +9,11 @@ package interfaces;
  *
  * @author jared
  */
-public interface Direccion {
-    public int x=2;
-    // un metodo
-    public void generarDireccion();
-    //pongamos un construcotor
+public class Usuario implements Direccion{
+  
+    @Override
+    public void generarDireccion() {
+       
+    }
+    
 }
