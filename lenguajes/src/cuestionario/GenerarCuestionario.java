@@ -12,6 +12,8 @@ import java.util.*;
  */
 public class GenerarCuestionario {
     public ArrayList<Pregunta> generar(){
+        
+        
         //promero generamos el arreglo que contendra las preguntas
         ArrayList<Pregunta> preguntas=new ArrayList<Pregunta>();
         //primero generamos cada opcion de la priemra pregunta

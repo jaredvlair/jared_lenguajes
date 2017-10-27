@@ -49,7 +49,7 @@ public class GeneradorUsuario {
         usuarios.add(u5);
         //vamos a ITERARLO para ve rlos nombres 
         for(Usuario u:usuarios){
-            System.out.println("nombre: "+u.getNombre());
+            System.out.println("nombre: "+u.getNombre()+"email" + u.getEmail());
         }
         
     }
