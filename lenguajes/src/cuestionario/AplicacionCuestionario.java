@@ -5,8 +5,10 @@
  */
 package cuestionario;
 
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import static javax.swing.UIManager.get;
 
@@ -37,6 +39,7 @@ public class AplicacionCuestionario extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         etiquetaTitulo = new javax.swing.JLabel();
         panelOpciones = new javax.swing.JPanel();
+        botonRespuesta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,7 +52,10 @@ public class AplicacionCuestionario extends javax.swing.JFrame {
         etiquetaTitulo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         etiquetaTitulo.setText("1.-CAPITAL DE FINLANDIA");
 
+        panelOpciones.setBackground(new java.awt.Color(51, 204, 255));
         panelOpciones.setLayout(new java.awt.GridLayout(4, 1));
+
+        botonRespuesta.setText("Checar Respuesta");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,8 +70,10 @@ public class AplicacionCuestionario extends javax.swing.JFrame {
                         .addGap(98, 98, 98)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(panelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etiquetaTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(168, Short.MAX_VALUE))
+                            .addComponent(etiquetaTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(botonRespuesta)))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -73,9 +81,12 @@ public class AplicacionCuestionario extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(etiquetaTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(etiquetaTitulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonRespuesta))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
@@ -122,6 +133,7 @@ public class AplicacionCuestionario extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new AplicacionCuestionario().setVisible(true);
             }
@@ -129,6 +141,7 @@ public class AplicacionCuestionario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonRespuesta;
     private javax.swing.JLabel etiquetaTitulo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
@@ -159,14 +172,43 @@ public class AplicacionCuestionario extends javax.swing.JFrame {
     
     ArrayList<Pregunta> preguntas=new GenerarCuestionario().generar();
     //del arraylist que se llama pregutna obtenemos el titulo de la primera pregunta
-       etiquetaTitulo.setText (preguntas.get(0).getTitulo());
+   
+    //para que se genere los radios butons que uno desee 
+    //ArrayList<JRadioButton> radios=new ArrayList<>();
+    //JRadioButton[]radios2=new JRadioButton[preguntas.get(0).getOpcion().size()];
+    
+   // //etiquetaTitulo.setText (preguntas.get(0).getTitulo());
+   // int indice=0;  
+    
+   // for(JRadioButton radio: radios2){
+           //grupo.add(radio);
+          // radio.setText(preguntas.get(0).getOpcion().get(indice).getTitulo());
+          // panelOpciones.add(radio);
+          // indice ++;
+       //}
        r1.setText(preguntas.get(0).getOpcion().get(0).getTitulo());
        
        r2.setText(preguntas.get(0).getOpcion().get(1).getTitulo());
        
        r3.setText(preguntas.get(0).getOpcion().get(2).getTitulo());
-       
+     
        r4.setText(preguntas.get(0).getOpcion().get(3).getTitulo());
+       
+       //aAqui vamos a programar el evento del boton con
+       //programacion funcional
+       //vamo+s a buscar la correcta
+       
+        
+       botonRespuesta.addActionListener(evento->{
+           
+           JOptionPane.showConfirmDialog(this, "probando esto");
+       
+       
+       });
+       };
+       
+       
     
     }
-}
+
+

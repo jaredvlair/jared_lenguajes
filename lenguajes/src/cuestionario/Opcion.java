@@ -12,9 +12,11 @@ package cuestionario;
 public class Opcion {
     private String titulo;
     private boolean correcta;  
-
-    Opcion(String moscu, boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+ int indice=0;  
+   public Opcion(String titulo, boolean correcta) {
+       this.titulo = titulo;
+       this.correcta =correcta;
+    
     }
 
     public String getTitulo() {

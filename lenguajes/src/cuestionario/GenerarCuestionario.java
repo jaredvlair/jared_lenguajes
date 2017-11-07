@@ -27,7 +27,7 @@ public class GenerarCuestionario {
         opciones1.add(op21);
         opciones1.add(op31);
         opciones1.add(op41);
-        Pregunta p1=new Pregunta ("Capital de Finlandia", opciones1);
+        Pregunta p1=new Pregunta ("Capital de Finlandia es", opciones1);
         preguntas.add(p1);
         
         //segunda prgunta
@@ -40,7 +40,7 @@ public class GenerarCuestionario {
         opciones1.add(op22);
         opciones1.add(op32);
         opciones1.add(op42);
-        Pregunta p2=new Pregunta ("Capital de Finlandia", opciones2);
+        Pregunta p2=new Pregunta ("Oyro", opciones2);
         preguntas.add(p2);
         return preguntas;
     }    
