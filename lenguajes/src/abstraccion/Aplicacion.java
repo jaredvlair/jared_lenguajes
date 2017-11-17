@@ -105,9 +105,12 @@ public class Aplicacion extends javax.swing.JFrame {
         //jared.peso=70;
         //jared.altura=1.68f;
         //PRIMERO PEDIMOIS EL VALOR TEXTO AL PRIMER COMENTARIO
+       try{
         float peso=Float.parseFloat(textopeso.getText());
+        Validaciones.validarNumeroNoNegativo(peso);
         jared.setPeso(peso);
         float altura=Float.parseFloat(textoaltura.getText());
+        Validaciones.validarNumeroNoNegativo(altura);
         jared.setAltura(altura);       
         Imc modelo=new Imc();
         modelo.u=jared;
@@ -116,8 +119,11 @@ public class Aplicacion extends javax.swing.JFrame {
               
                
                etiqueta.setText( modelo.calcular());
+       }catch (NumeroNegativoException e){
+           etiqueta.setText(e.getMessage());
+       }
     }//GEN-LAST:event_botoncitoActionPerformed
-
+    
     private void textopesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textopesoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textopesoActionPerformed
